@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bank-dark: #0A1628; --bank-surface: #132035; --bank-surface2: #1C2D47;
+  --bank-border: #2A4066; --bank-primary: #1B2A4A; --bank-primaryLight: #2D4A7A;
+  --bank-accent: #00D4AA; --bank-warm: #F5A623; --bank-red: #E63946;
+  --bank-text: #E8EDF5; --bank-muted: #4A6080; --bank-secondary: #8A9BB5;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body, #root { height: 100%; width: 100%; overflow: hidden; }
+
+body { font-family: 'Inter', sans-serif; background-color: var(--bank-dark); color: var(--bank-text); -webkit-font-smoothing: antialiased; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bank-dark); }
+::-webkit-scrollbar-thumb { background: var(--bank-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--bank-muted); }
+
+@keyframes fadeSlideIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulseGlow { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.animate-fade-slide { animation: fadeSlideIn 0.4s ease-out forwards; }
+.animate-pulse-glow { animation: pulseGlow 1.5s ease-in-out infinite; }
+.animate-spin { animation: spin 1s linear infinite; }
